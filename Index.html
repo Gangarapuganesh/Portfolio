@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gangarapu Ganesh — Portfolio</title>
+  <meta name="description" content="Portfolio of Gangarapu Ganesh — Data Analyst, Software Engeneer, Power BI enthusiast" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc; --glass: rgba(255,255,255,0.04);
+      --fw-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--fw-sans);background:linear-gradient(180deg,#071021 0%, #0b1220 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:140px;height:140px;border-radius:18px;overflow:hidden;flex:0 0 140px;background:linear-gradient(135deg,#0b1220,#122033);display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero{flex:1}
+    h1{margin:0;font-size:28px}
+    .tagline{color:var(--muted);margin-top:6px}
+    .actions{margin-top:14px;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#07202a;padding:10px 14px;border-radius:10px;font-weight:600}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px}
+
+    nav{display:flex;gap:14px;margin-top:18px}
+    nav a{color:var(--muted);font-size:14px}
+
+    main{margin-top:28px;display:grid;grid-template-columns:2fr 1fr;gap:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    /* About */
+    .about p{color:var(--muted);line-height:1.6}
+
+    /* Skills */
+    .skill{margin-bottom:12px}
+    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+    .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--accent),#60a5fa);transition:width 1.2s ease}
+
+    /* Projects */
+    .filters{display:flex;gap:8px;margin-bottom:12px}
+    .chip{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;font-size:13px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+    @media(min-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .project{padding:12px;border-radius:10px;background:var(--glass)}
+    .project h4{margin:0}
+    .meta{font-size:13px;color:var(--muted);margin-top:6px}
+    .tech{font-size:12px;margin-top:8px}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .trow{display:flex;gap:12px}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);flex:0 0 12px;margin-top:6px}
+    .tcontent{color:var(--muted)}
+
+    /* Contact */
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:var(--muted)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Floating controls */
+    .top-right{position:fixed;right:18px;top:18px;z-index:50;display:flex;gap:8px}
+    .toggle{background:rgba(255,255,255,0.03);padding:8px;border-radius:10px;cursor:pointer}
+
+    /* small */
+    @media(max-width:720px){main{grid-template-columns:1fr}header{flex-direction:row} .avatar{width:96px;height:96px;flex:0 0 96px}}
+
+  </style>
+</head>
+<body>
+  <div class="top-right">
+    <div class="toggle" id="modeToggle" title="Toggle Dark/Light">🌓</div>
+  </div>
+  <div class="container">
+    <header>
+      <div class="avatar card">
+        <!-- Replace src with your photo URL -->
+        <img id="profilePic" src="C:\Users\ganga\Downloads\portfolio\Ganesh.jpg" alt="Ganesh">
+      </div>
+      <div class="hero">
+        <h1>Gangarapu Ganesh <span style="color:var(--muted);font-size:15px">(Bujji)</span></h1>
+        <div class="tagline">Data Analyst | Business Analyst | Software Engeneer</div>
+        <div class="actions">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn-outline" href="#contact">Contact</a>
+          <a class="btn-outline" href="https://www.linkedin.com/in/gangarapu-ganesh-16a7021b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="card about" id="about">
+        <h3>About Me</h3>
+        <p>Hi I'm <strong>Gangarapu Ganesh</strong> Results-driven associate Data labs with 2+ years of experience at First American (India), now seeking new opportunities in data analytics and business intelligence.
+Skilled in:
+
+Power BI: Creating interactive dashboards and reports
+
+SQL: Writing queries for data extraction, validation, and transformation
+
+Excel + VBA: Automating repetitive tasks and building user-friendly tools
+
+Python: Using libraries like Pandas, NumPy, and Matplotlib for data analysis and visualization
+
+I specialize in ensuring data accuracy, streamlining processes, and delivering insights that help businesses make better decisions.</p>
+
+        <h4 style="margin-top:12px">Highlights</h4>
+        <ul style="color:var(--muted)">
+          <li>Power BI dashboards — Heart Disease Analysis, India Exports, Resource Utilization</li>
+          <li>Web projects — Tax directory webpage, Wedding invitation webpage</li>
+          <li>Excel/VBA automation — Smart Leave Tracker with UserForm and macros</li>
+          <li>Certificates: Excel Data Analysis, SQL Essential, Python in Excel,Power Bi</li>
+        </ul>
+
+      </section>
+
+      <aside class="card">
+        <h3>Contact</h3>
+        <div class="contact-list">
+          <div>Email: <a href="mailto:gangarapuganesh225@gmail.com">gangarapuganesh225@gmail.com</a></div>
+          <div>Phone: <a href="tel:+919550751672">+91 95507 51672</a></div>
+          <div>Instagram: <a href="https://instagram.com/its_ganesh_naidu_531" target="_blank">@its_ganesh_naidu_531</a></div>
+          <div>LinkedIn: <a href="https://www.linkedin.com/in/gangarapu-ganesh-16a7021b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">View profile</a></div>
+        </div>
+
+        <h3 style="margin-top:16px">Prepared by</h3>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+          <img src="C:\Users\ganga\Downloads\portfolio\Ganesh.jpg" style="width:64px;height:64px;border-radius:10px;object-fit:cover" alt="G">
+          <div>
+            <div style="font-weight:700">Gangarapu Ganesh</div>
+            <div style="color:var(--muted);font-size:13px">Data Lab Analyst, First American India</div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="card" id="skills">
+        <h3>Skills</h3>
+        <div style="display:flex;gap:12px;flex-direction:column;margin-top:8px">
+          <div class="skill">
+            <div class="label"><span>Power BI</span><span>90%</span></div>
+            <div class="bar"><div class="fill" data-width="90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>Excel (Advanced & VBA)</span><span>92%</span></div>
+            <div class="bar"><div class="fill" data-width="92%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>Python & SQL</span><span>85%</span></div>
+            <div class="bar"><div class="fill" data-width="85%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>HTML / CSS / JS</span><span>78%</span></div>
+            <div class="bar"><div class="fill" data-width="78%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="experience">
+        <h3>Experience & Education</h3>
+        <div class="timeline">
+          <div class="trow">
+            <div class="dot"></div>
+            <div class="tcontent"><strong>First American India — Data Labs</strong><div class="meta">2 years — Data labs, QA, data Analyst</div></div>
+          </div>
+          <div class="trow">
+            <div class="dot"></div>
+            <div class="tcontent"><strong>Cloud Computing & Big Data Internship</strong><div class="meta">Project: Handwritten Digit Prediction</div></div>
+          </div>
+          <div class="trow">
+            <div class="dot"></div>
+            <div class="tcontent"><strong>MCA</strong><div class="meta">Completed 2025 — Vaagdevi Engineering College</div></div>
+          </div>
+          <div class="trow">
+            <div class="dot"></div>
+            <div class="tcontent"><strong>B.Sc (Math)</strong><div class="meta">Sphoorthy Degree & PG College — 2022</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="projects">
+        <h3>Projects</h3>
+        <div class="filters">
+          <div class="chip" data-filter="all">All</div>
+          <div class="chip" data-filter="powerbi">Power BI</div>
+          <div class="chip" data-filter="web">Web</div>
+          <div class="chip" data-filter="vba">VBA</div>
+        </div>
+
+        <div class="grid" id="projectGrid">
+          <!-- Project entries -->
+          <div class="project" data-type="powerbi">
+            <h4>Heart Disease Analysis Dashboard</h4>
+            <div class="meta">Power BI project analysing heart disease risk factors and model insights.</div>
+            <div class="tech">Power BI • DAX • Data Cleaning</div>
+            <div style="margin-top:8px"><a href="#" class="btn-outline">Demo / Repo</a></div>
+          </div>
+
+          <div class="project" data-type="powerbi">
+            <h4>India Exports Dashboard</h4>
+            <div class="meta">Country-wise exports analysis with filters and KPIs.</div>
+            <div class="tech">Power BI • SQL</div>
+            <div style="margin-top:8px"><a href="#" class="btn-outline">Demo / Repo</a></div>
+          </div>
+
+          <div class="project" data-type="web">
+            <h4>Tax Directory Webpage</h4>
+            <div class="meta">HTML / CSS / JS directory for tax certificates and search UI.</div>
+            <div class="tech">HTML • CSS • JavaScript</div>
+            <div style="margin-top:8px"><a href="#" class="btn-outline">Repo</a></div>
+          </div>
+
+          <div class="project" data-type="web">
+            <h4>Wedding Invitation Webpage</h4>
+            <div class="meta">Swipeable gallery, music toggle, QR save-the-date and animations.</div>
+            <div class="tech">HTML • CSS • JS</div>
+            <div style="margin-top:8px"><a href="#" class="btn-outline">Live</a></div>
+          </div>
+
+          <div class="project" data-type="vba">
+            <h4>Smart Leave Tracker (Excel VBA)</h4>
+            <div class="meta">UserForm-based leave tracker with validations and monthly caps.</div>
+            <div class="tech">Excel • VBA</div>
+            <div style="margin-top:8px"><a href="#" class="btn-outline">Download</a></div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="card" id="contact">
+        <h3>Contact</h3>
+        <p style="color:var(--muted)">If you'd like to collaborate, hire, or just say hi — reach out.</p>
+        <div style="display:flex;gap:8px;flex-direction:column;margin-top:12px">
+          <a class="btn" href="mailto:gangarapuganesh225@gmail.com">Email Me</a>
+          <a class="btn-outline" href="tel:+919550752672">Call / WhatsApp</a>
+          <a class="btn-outline" href="https://github.com/" target="_blank">My GitHub (add link)</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <strong><span id="year"></span> <b>Gangarapu Ganesh</b></strong></div>
+    </footer>
+  </div>
+
+  <script>
+    // populate year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // animate skill bars when in view
+    function animateSkills(){
+      document.querySelectorAll('.fill').forEach(el=>{
+        const w = el.getAttribute('data-width') || '70%';
+        el.style.width = w;
+      });
+    }
+    // run once
+    animateSkills();
+
+    // project filtering
+    document.querySelectorAll('.chip').forEach(c=>{
+      c.addEventListener('click',()=>{
+        const f = c.getAttribute('data-filter');
+        document.querySelectorAll('.project').forEach(p=>{
+          if(f==='all' || p.dataset.type===f) p.style.display='block'; else p.style.display='none';
+        });
+        document.querySelectorAll('.chip').forEach(x=>x.style.background='');
+        c.style.background='rgba(255,255,255,0.03)';
+      });
+    });
+
+    // theme toggle (simple)
+    const modeToggle = document.getElementById('modeToggle');
+    modeToggle.addEventListener('click',()=>{
+      if(document.documentElement.style.getPropertyValue('--bg')===''){
+        document.documentElement.style.setProperty('--bg','#ffffff');
+        document.body.style.background = 'linear-gradient(180deg,#f7fafc 0%, #e6eef6 100%)';
+        document.body.style.color='#06202a';
+      } else {
+        document.documentElement.style.setProperty('--bg','#0f1724');
+        document.body.style.background = 'linear-gradient(180deg,#071021 0%, #0b1220 100%)';
+        document.body.style.color='#e6eef6';
+      }
+    });
+
+    // allow easy replacement of profile pic by dragging a file (client-side only)
+    const avatar = document.getElementById('profilePic');
+    avatar.addEventListener('click',()=>{
+      const url = prompt('Enter full image URL for your profile picture (or leave blank to keep placeholder)');
+      if(url) avatar.src = url;
+    });
+
+    // keyboard shortcut to download HTML (Ctrl+D)
+    document.addEventListener('keydown', (e)=>{
+      if((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='d'){
+        const blob = new Blob([document.documentElement.outerHTML],{type:'text/html'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob); a.download = 'Ganesh_Portfolio.html'; a.click();
+      }
+    });
+  </script>
+</body>
+</html>
